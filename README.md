@@ -4,31 +4,39 @@ A Python-based **Wordle solver bot** that suggests optimal guesses based on how 
 This solver uses feedback (`g`, `y`, `b`) to aggressively reduce the remaining search space.
 
 ## Project Structure
-├── main.py # Main solver logic and CLI
-├── text_init.py # Word list and preprocessing utilities
-├── words.txt # Allowed Wordle guesses (5-letter words)
+```
+├── src/
+│   ├── main.py              
+│   ├── text_init.py         
+│   └── files/
+│       ├── requirements.txt
+│       ├── words.txt        
+│       └── words_frequency.txt
 ├── LICENSE
 └── README.md
-
+```
 ## Installation
 ### Required Libraries
 1) wordfreq
 2) colorama
 To install these libraries, run:
 ```bash
-pip install -r requirements.txt
+pip install -r files/requirements.txt
 ```
 
 
 
 ## How to Run
 ### Add word list
-Start off by adding any five letter word list of your choice. If you don't want to, there is already a default one.
+Start off by adding any five letter word list of your choice. If you don't want to, there is already a default list.
 ### Initialize `words_frequency.txt`
 run the python file
 ```bash
-python text_init.py
+python src/text_init.py
 ```
-### Run `main.py`
+### Run `src/main.py`
+```bash
+python src/main.py
+```
 Have fun!
 
