@@ -21,7 +21,7 @@ This solver uses feedback (`g`, `y`, `b`) to aggressively reduce the remaining s
 2) colorama
 To install these libraries, run:
 ```bash
-pip install -r files/requirements.txt
+pip install -r src/files/requirements.txt
 ```
 
 
