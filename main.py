@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse
 import math
+from colorama import Fore
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable, List, Mapping, Sequence, Tuple
@@ -220,15 +221,12 @@ def autoplay(solver: WordleSolver, answer: str, max_steps: int) -> None:
             f"Guess {attempt}: {guess.upper()} | frequency={frequency:.3f} | "
             f"search space={remaining} | feedback={pattern_str}"
         )
-        if feedback == completion:
-            print(f"Solved in {attempt} steps! 🟩")
-            return
         candidates = solver.filter_candidates(candidates, guess, feedback)
     print("Failed to crack the word within the allotted steps.")
 
 
 def interactive_session(solver: WordleSolver, max_steps: int) -> None:
-    print("Enter feedback as a string of five letters (g=green, y=yellow, b=gray).")
+    print("Enter feedback as a string of five letters (" + Fore.GREEN + "g=green," + Fore.YELLOW + "y=yellow," + Fore.WHITE + "b=gray).")
     candidates = solver.words[:]
     for attempt in range(1, max_steps + 1):
         guess, frequency = solver.best_guess(candidates)

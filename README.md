@@ -13,9 +13,13 @@ This solver uses feedback (`g`, `y`, `b`) to aggressively reduce the remaining s
 ## Installation
 ### Required Libraries
 1) wordfreq
-   ```bash
-   pip install wordfreq
-   ```
+2) colorama
+To install these libraries, run:
+```bash
+pip install -r requirements.txt
+```
+
+
 
 ## How to Run
 ### Add word list
