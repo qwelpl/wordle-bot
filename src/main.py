@@ -254,8 +254,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--words",
         type=Path,
-        default=Path("words.txt"),
-        help="Path to list of allowed words (default: words.txt)",
+        default=Path("files/words.txt"),
+        help="Path to list of allowed words (default: files/words.txt)",
     )
     parser.add_argument(
         "--answer",
@@ -265,7 +265,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--frequencies",
         type=Path,
-        default=Path("words_frequency.txt"),
+        default=Path("files/words_frequency.txt"),
         help="Optional path to a cached 'word frequency' table for tie-breaking",
     )
     parser.add_argument(

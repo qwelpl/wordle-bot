@@ -3,8 +3,8 @@ from pathlib import Path
 from wordfreq import zipf_frequency
 
 
-WORDS_FILE = Path("words.txt")
-FREQUENCY_FILE = Path("words_frequency.txt")
+WORDS_FILE = Path("files/words.txt")
+FREQUENCY_FILE = Path("files/words_frequency.txt")
 
 
 def load_words() -> list[str]:
