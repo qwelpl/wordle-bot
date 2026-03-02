@@ -32,7 +32,8 @@ Start off by adding any five letter word list of your choice. If you don't want 
 ### Initialize `words_frequency.txt`
 run the python file
 ```bash
-python src/text_init.py
+cd src
+python text_init.py
 ```
 ### Run `src/main.py`
 ```bash
